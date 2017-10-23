@@ -1,33 +1,21 @@
 @import 'custom';
 @import '../node_modules/bootstrap/scss/bootstrap';
 
+// Responsive typography sizes using Bootstrap mixins for the media querries
+html {
+  @include media-breakpoint-up(sm) { font-size: 16px; }
+  @include media-breakpoint-up(md) { font-size: 20px; }
+  @include media-breakpoint-up(lg) { font-size: 28px; }
+  font-size: 14px;
+}
+
+// A bit of extra padding for our simplistic example.
 body {
   padding: 2rem 0;
 }
 
-// Responsive typography sizes using Bootstrap mixins for the media querries
-html {
-  font-size: 14px;
-}
-
-@include media-breakpoint-up(sm) {
-  html {
-    font-size: 16px;
-  }
-}
-
-@include media-breakpoint-up(md) {
-  html {
-    font-size: 20px;
-  }
-}
-
-@include media-breakpoint-up(lg) {
-  html {
-    font-size: 28px;
-  }
-}
-
+// Use Sass inheritance / @extend directive to include some default bootstrap
+// classes as part of the definition for our custum class.
 .header-subtle {
   @extend .text-warning;
   @extend .text-uppercase;

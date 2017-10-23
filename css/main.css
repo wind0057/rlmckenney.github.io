@@ -5552,23 +5552,20 @@ a.text-dark:focus, a.text-dark:hover {
 .invisible {
   visibility: hidden !important; }
 
-body {
-  padding: 2rem 0; }
-
 html {
   font-size: 14px; }
+  @media (min-width: 576px) {
+    html {
+      font-size: 16px; } }
+  @media (min-width: 768px) {
+    html {
+      font-size: 20px; } }
+  @media (min-width: 992px) {
+    html {
+      font-size: 28px; } }
 
-@media (min-width: 576px) {
-  html {
-    font-size: 16px; } }
-
-@media (min-width: 768px) {
-  html {
-    font-size: 20px; } }
-
-@media (min-width: 992px) {
-  html {
-    font-size: 28px; } }
+body {
+  padding: 2rem 0; }
 
 .header-subtle {
   font-size: 1.2rem;
